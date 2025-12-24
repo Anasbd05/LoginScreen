@@ -14,7 +14,7 @@ export default function SignupScreen() {
   const navigate = useRouter();
   return (
     <ScrollView style={tw` flex-1 bg-indigo-500`}>
-      <View style={tw`flex-row justify-start`}>
+      <View style={tw`flex-row mt-10 justify-start`}>
         <TouchableOpacity
           style={tw`bg-yellow-400 p-2 rounded-tr-2xl ml-4`}
           onPress={() => navigate.back()}
@@ -25,11 +25,11 @@ export default function SignupScreen() {
       <View style={tw`flex-row justify-center`}>
         <Image
           style={{ width: 200, height: 200 }}
-          source={require("../../assets/images/welcome.png")}
+          source={require("../../assets/images/signup.png")}
         />
       </View>
       <View
-        style={tw`flex-1 bg-white px-8 py-8 mt-8 rounded-tr-2xl rounded-tl-2xl`}
+        style={tw`flex-1  bg-white px-8 py-8 pb-18 mt-8 rounded-tr-2xl rounded-tl-2xl`}
       >
         <View style={tw`form gap-y-2`}>
           <Text style={tw`text-gray-700 ml-4`}>Full Name</Text>
@@ -87,7 +87,7 @@ export default function SignupScreen() {
             Already have an account?
           </Text>
           <TouchableOpacity
-            onPress={() => navigate.push("/../screens/LoginScreen")}
+            onPress={() => navigate.push("/screens/LoginScreen")}
           >
             <Text style={tw`font-semibold text-yellow-500`}> Login</Text>
           </TouchableOpacity>
